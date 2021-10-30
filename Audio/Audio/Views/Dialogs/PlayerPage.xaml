@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:xe="clr-namespace:XamEffects;assembly=XamEffects"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:vm="clr-namespace:Audio.ViewModels"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" x:DataType="vm:PlayerViewModel"
+                 x:Class="Audio.Views.Dialogs.PlayerPage">
+
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+            PositionIn="Bottom"
+            PositionOut="Bottom"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+
+    <!--Pages Content-->
+    <pancakeView:PancakeView
+        VerticalOptions="FillAndExpand"
+        HorizontalOptions="FillAndExpand"
+        Padding="10"
+        IsClippedToBounds="True"
+        BackgroundColor="#2b2d36">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+
+            <!--Back button-->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Source="close.png"
+                       Aspect="Fill"
+                       HeightRequest="15"
+                       WidthRequest="25"
+                       Margin="20,30,20,0"
+                       VerticalOptions="StartAndExpand"
+                       HorizontalOptions="StartAndExpand"
+                       xct:TouchEffect.AnimationDuration="2"
+                       xct:TouchEffect.PressedScale="0.1"
+                       xct:TouchEffect.Command="{Binding Source={RelativeSource AncestorType={x:Type vm:PlayerViewModel}},Path=CloseCommand}"/>
+            </Grid>
+
+            <!--Titles-->
+            <StackLayout Grid.Row="1">
+                <Label Text="I will be here"
+                       FontSize="Title"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"
+                       HorizontalOptions="CenterAndExpand"
+                       TextColor="White"/>
+
+                <Label Text="Celine Dion"
+                       FontSize="Subtitle"
+                       VerticalOptions="Center"
+                       HorizontalOptions="CenterAndExpand"
+                       TextColor="White"/>
+            </StackLayout>
+
+            <!--Image center-->
+            <pancakeView:PancakeView
+                Grid.Row="2"
+                Margin="30,10,30,0" xe:TouchEffect.Color="#005fbf">
+                <pancakeView:PancakeView.Shadow>
+                    <pancakeView:DropShadow Color="#005fbf"/>
+                </pancakeView:PancakeView.Shadow>
+                <Image Source="concertnight.jpg" Aspect="Fill"/>
+            </pancakeView:PancakeView>
+
+            <!--Button zone-->
+            <Grid Grid.Row="5" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Source="prev.png" 
+                           HeightRequest="35" 
+                           WidthRequest="35"
+                           HorizontalOptions="EndAndExpand"
+                           VerticalOptions="CenterAndExpand"
+                           Margin="0,0,20,0"
+                           Grid.Column="0"
+                       android:VisualElement.Elevation="21"
+                       xct:TouchEffect.PressedAnimationDuration="200"
+                       xct:TouchEffect.PressedScale="0.1"/>
+
+                <Image Source="{Binding PlayPause}" 
+                           HeightRequest="70" 
+                           WidthRequest="70"
+                           HorizontalOptions="EndAndExpand"
+                           VerticalOptions="CenterAndExpand"
+                           Margin="15,0,15,0"
+                           Grid.Column="1" android:VisualElement.Elevation="21"
+                       xct:TouchEffect.PressedAnimationDuration="200"
+                       xct:TouchEffect.PressedScale="0.1"
+                       xct:TouchEffect.Command="{Binding Source={RelativeSource AncestorType={x:Type vm:PlayerViewModel}}, Path=PlayPauseCommand}"/>
+
+                <Image Source="next.png" 
+                           HeightRequest="35" 
+                           WidthRequest="35"
+                           HorizontalOptions="EndAndExpand"
+                           VerticalOptions="CenterAndExpand"
+                           Margin="0,0,50,0"
+                           Grid.Column="2" android:VisualElement.Elevation="21"
+                       xct:TouchEffect.PressedAnimationDuration="200"
+                       xct:TouchEffect.PressedScale="0.1"/>
+            </Grid>
+
+            <!--Slider-->
+            <StackLayout Grid.Row="4">
+                <Slider MaximumTrackColor="#005bfb" 
+                        VerticalOptions="Center"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="20,0,20,0"
+                        Maximum="100"
+                        Minimum="0"/>
+
+                <Label Text="3:45"
+                       FontSize="Subtitle"
+                       TextColor="#005fbf"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="StartAndExpand"
+                       Margin="20,-10,0,0"/>
+            </StackLayout>
+        </Grid>
+
+
+    </pancakeView:PancakeView>
+</pages:PopupPage>

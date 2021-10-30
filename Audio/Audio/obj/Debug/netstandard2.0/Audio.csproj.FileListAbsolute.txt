@@ -1,0 +1,15 @@
+C:\Users\CTRL TECH\Documents\Works\Audio\Audio\Audio\bin\Debug\netstandard2.0\Audio.deps.json
+C:\Users\CTRL TECH\Documents\Works\Audio\Audio\Audio\bin\Debug\netstandard2.0\Audio.dll
+C:\Users\CTRL TECH\Documents\Works\Audio\Audio\Audio\bin\Debug\netstandard2.0\Audio.pdb
+C:\Users\CTRL TECH\Documents\Works\Audio\Audio\Audio\obj\Debug\netstandard2.0\Audio.csproj.AssemblyReference.cache
+C:\Users\CTRL TECH\Documents\Works\Audio\Audio\Audio\obj\Debug\netstandard2.0\Audio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CTRL TECH\Documents\Works\Audio\Audio\Audio\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\CTRL TECH\Documents\Works\Audio\Audio\Audio\obj\Debug\netstandard2.0\Views\Dialogs\PlayerPage.xaml.g.cs
+C:\Users\CTRL TECH\Documents\Works\Audio\Audio\Audio\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+C:\Users\CTRL TECH\Documents\Works\Audio\Audio\Audio\obj\Debug\netstandard2.0\Views\RecentMusicPage.xaml.g.cs
+C:\Users\CTRL TECH\Documents\Works\Audio\Audio\Audio\obj\Debug\netstandard2.0\Audio.AssemblyInfoInputs.cache
+C:\Users\CTRL TECH\Documents\Works\Audio\Audio\Audio\obj\Debug\netstandard2.0\Audio.AssemblyInfo.cs
+C:\Users\CTRL TECH\Documents\Works\Audio\Audio\Audio\obj\Debug\netstandard2.0\Audio.csproj.CoreCompileInputs.cache
+C:\Users\CTRL TECH\Documents\Works\Audio\Audio\Audio\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\CTRL TECH\Documents\Works\Audio\Audio\Audio\obj\Debug\netstandard2.0\Audio.dll
+C:\Users\CTRL TECH\Documents\Works\Audio\Audio\Audio\obj\Debug\netstandard2.0\Audio.pdb
